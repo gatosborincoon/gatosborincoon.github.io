@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gatos Borincoon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Gatos2.css">
+</head>
+<body>
+
+<div class="header">
+</div>
+
+<div class="topnav">
+    <div class="topnav-container">
+        <img src="media/logo1.jpg" alt="Gatos Borincoon Logo" class="topnav-logo">
+        <div class="menu">
+            <a href="cat_home.html">Home</a>
+            <!-- Adopt (with dropdown) -->
+            <div class="dropdown">
+                <a href="#" class="submenu">Adopt</a>
+                <ul class="dropdown-content">
+                    <li><a href="adopt_cats.html">Adopt Cats</a></li>
+                    <li><a href="stories.html">Adoption Stories</a></li>
+                    <li><a href="application.html">Adoption Application</a></li>
+                    <li><a href="terms_and_conditions.html">Terms and Conditions</a></li>
+                    <li><a href="adoption_costs.html">Adoption Contract</a></li>
+                    <li><a href="rescue_costs.html">Rescue Costs</a></li>
+                </ul>
+            </div>
+
+        <!-- Other menu items -->
+        <a href="cat_tales.html">Cat Tales</a>
+        <a href="gallery.html">Cat Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        </div>
+         <div class="hamburger" onclick="toggleMenu()">
+        &#9776; <!-- This is the hamburger icon -->
+        </div>
+    </div>
+    <script>
+    function toggleMenu() {
+        var menu = document.querySelector(".topnav .menu");
+        menu.classList.toggle("active");
+    }
+    </script>
+</div>
+
+<!-- New section for the cat image -->
+<div class="main-image">
+    <img src="media/Beatriz10m.JPG" alt="Cat Picture">
+</div>
+
+</body>
+</html>
