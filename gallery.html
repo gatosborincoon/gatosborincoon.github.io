@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gatos Borincoon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Gatos2.css">
+</head>
+<body>
+
+<div class="header">
+</div>
+
+<div class="topnav">
+    <img src="media/logo1.jpg" alt="Gatos Borincoon Logo" class="topnav-logo">
+        <div class="menu">
+            <a href="cat_home.html">Home</a>
+            <!-- Adopt (with dropdown) -->
+            <div class="dropdown">
+                <a href="#" class="submenu">Adopt</a>
+                <ul class="dropdown-content">
+                    <li><a href="adopt_cats.html">Adopt Cats</a></li>
+                    <li><a href="stories.html">Adoption Stories</a></li>
+                    <li><a href="application.html">Adoption Application</a></li>
+                    <li><a href="terms_and_conditions.html">Terms and Conditions</a></li>
+                    <li><a href="adoption_costs.html">Adoption Contract</a></li>
+                    <li><a href="rescue_costs.html">Rescue Costs</a></li>
+                </ul>
+            </div>
+
+        <!-- Other menu items -->
+        <a href="cat_tales.html">Cat Tales</a>
+        <a href="gallery.html">Cat Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        &#9776; <!-- This is the hamburger icon -->
+    </div>
+</div>
+<div class="gallery-container">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="media/Beatriz8w.jpg" alt="Beatrice"></div>
+        <div class="gallery-item"><img src="media/Beatriz8w1.jpg" alt="Cat 2"></div>
+        <div class="gallery-item"><img src="media/1723665864829.jpg" alt="Cat 3"></div>
+        <div class="gallery-item"><img src="media/1723660388607.jpg" alt="Cat 4"></div>
+        <div class="gallery-item"><img src="media/Inigo7w.jpg" alt="Inigo Playing"></div>
+        <div class="gallery-item"><img src="media/Inigo8w.jpg" alt="Inigo"></div>
+        <div class="gallery-item"><img src="media/Selena_Roses.jpg" alt="Snow White and Rose Red"></div>
+        <div class="gallery-item"><img src="media/1723769092891.jpg" alt="Curled up in the Moon"></div>
+        <div class="gallery-item"><img src="media/1723769100519.jpg" alt="Rooow"></div>
+        <div class="gallery-item"><img src="media/1723769074887.jpg" alt="Happy Holidays"></div>
+        <div class="gallery-item"><img src="media/1723769104853.jpg" alt="Hello Friend"></div>
+        <div class="gallery-item"><img src="media/1723660466668.jpg" alt="Love"></div>
+        <div class="gallery-item"><img src="media/chair.jpg" alt="Brown Chair"></div>
+        <div class="gallery-item"><img src="media/Christmas.jpg" alt="Christmas"></div>
+        <div class="gallery-item"><img src="media/kitties.jpg" alt="Kitties"></div>
+        <!-- Add more gallery-item divs for additional pictures -->
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption" class="modal-caption"></div>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the modal image and caption
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    // Get all images in the gallery
+    var images = document.querySelectorAll(".gallery-item img");
+    images.forEach(function(img) {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        };
+    });
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("modal-close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    // Close the modal when clicking outside the image
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+<script>
+    function toggleMenu() {
+        var menu = document.querySelector(".topnav .menu");
+        menu.classList.toggle("active");
+    }
+</script>
+
+
+</body>
+</html>
