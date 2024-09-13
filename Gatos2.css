@@ -395,4 +395,25 @@ body {
     .gallery-grid {
         grid-template-columns: 1fr; /* Adjust to 1 column wide on very small screens */
     }
+    .left-column {
+    width: 40%;
+    padding: 20px;
+    background-color: #ffffff; /* Brighter white background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    float: none;
+}
+
+/* Right column styling (Text and Pictures) */
+.right-column {
+    width: 40%;
+    padding: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    min-height: 100%; /* Ensure the right-column takes up full height */
+    float: none;
+}
 }
