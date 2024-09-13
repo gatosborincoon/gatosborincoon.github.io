@@ -131,7 +131,7 @@ body {
 }
 
 .about-image img {
-    width: 50%;
+    width: 100%;
     height: auto;
     display: block; /* Removes any default padding or margins */
     object-fit: contain; /* Ensures the entire image is visible */
