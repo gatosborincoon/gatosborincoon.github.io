@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gatos Borincoon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Gatos2.css"> <!-- Your existing stylesheet -->
+    <style>
+        /* Additional styles for form styling */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <!-- Your header content -->
+</div>
+
+<div class="topnav">
+    <div class="topnav-container">
+        <img src="media/logo1.jpg" alt="Gatos Borincoon Logo" class="topnav-logo">
+        <div class="menu">
+            <a href="cat_home.html">Home</a>
+            <!-- Adopt (with dropdown) -->
+            <div class="dropdown">
+                <a href="#" class="submenu">Adopt</a>
+                <ul class="dropdown-content">
+                    <li><a href="adopt_cats.html">Adopt Cats</a></li>
+                    <li><a href="stories.html">Adoption Stories</a></li>
+                    <li><a href="application.html">Adoption Application</a></li>
+                    <li><a href="terms_and_conditions.html">Terms and Conditions</a></li>
+                    <li><a href="adoption_costs.html">Adoption Contract</a></li>
+                    <li><a href="rescue_costs.html">Rescue Costs</a></li>
+                </ul>
+            </div>
+
+            <!-- Other menu items -->
+            <a href="cat_tales.html">Cat Tales</a>
+            <a href="gallery.html">Cat Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- This is the hamburger icon -->
+        </div>
+    </div>
+</div>
+
+<!-- Begin the Adoption Form Section -->
+<div class="content">
+    <h1>Pet Adoption Application Form</h1>
+    <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace 'your-form-id' with your actual Formspree form ID -->
+
+        <!-- Owner Information -->
+        <p>
+            <label for="owner-name">Current Owner’s Name:</label>
+            <input type="text" id="owner-name" name="owner_name" required>
+        </p>
+        <p>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+        </p>
+        <p>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="zip">ZIP Code:</label>
+            <input type="text" id="zip" name="zip" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </p>
+
+        <!-- Cat Information -->
+        <p>
+            <label for="cat-name">Cat Name:</label>
+            <input type="text" id="cat-name" name="cat_name" required>
+
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" name="breed" required>
+
+            <label for="sex">Sex:</label>
+            <input type="text" id="sex" name="sex" required>
+        </p>
+        <p>
+            <label for="spay-neutered">Spay/Neutered:</label>
+            <input type="text" id="spay-neutered" name="spay_neutered" required>
+
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color">
+        </p>
+
+        <!-- More form fields can go here... -->
+
+        <!-- Submit Button -->
+        <p>
+            <button type="submit">Submit Application</button>
+        </p>
+    </form>
+</div>
+
+<script>
+function toggleMenu() {
+    var menu = document.querySelector(".topnav .menu");
+    menu.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
