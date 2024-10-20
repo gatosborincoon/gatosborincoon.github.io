@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gatos Borincoon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Gatos2.css"> <!-- Your existing stylesheet -->
+    <style>
+        /* Additional styles for form styling */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <!-- Your header content -->
+</div>
+
+<div class="topnav">
+    <div class="topnav-container">
+        <img src="media/logo1.jpg" alt="Gatos Borincoon Logo" class="topnav-logo">
+        <div class="menu">
+            <a href="cat_home.html">Home</a>
+            <!-- Adopt (with dropdown) -->
+            <div class="dropdown">
+                <a href="#" class="submenu">Adopt</a>
+                <ul class="dropdown-content">
+                    <li><a href="adopt_cats.html">Adopt Cats</a></li>
+                    <li><a href="stories.html">Adoption Stories</a></li>
+                    <li><a href="Pre_Application.html">Pre-Application Form</a></li>
+                    <li><a href="application.html">Adoption Application</a></li>
+                    <li><a href="adoption_costs.html">Adoption Contract</a></li>
+                    <li><a href="rescue_costs.html">Rescue Costs</a></li>
+                </ul>
+            </div>
+
+            <!-- Other menu items -->
+            <a href="gallery.html">Cat Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="donate.html">Donate</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- This is the hamburger icon -->
+        </div>
+    </div>
+</div>
+<div class="content">
+    <h1>Pre-adoption Questionaire</h1>
+    <form action="https://formspree.io/f/xrbgbbzv" method="POST">
+<h2>Placement Questionnaire</h2>
+
+<label for="had-pets">Have you had pets in the past?</label>
+<input type="text" id="had-pets" name="had_pets" placeholder="Yes or No" required>
+<br>
+
+<label for="what-happened">What happened to them?</label>
+<textarea id="what-happened" name="what_happened" rows="2" cols="50" placeholder="Explain briefly" required></textarea>
+<br>
+
+<label for="hours-alone">How many hours would the pet be alone during the day?</label>
+<input type="text" id="hours-alone" name="hours_alone" required>
+<br>
+
+<label for="allowed-outdoors">Will your cat be allowed outdoors?</label>
+<input type="text" id="allowed-outdoors" name="allowed_outdoors" placeholder="Yes or No" required>
+<br>
+
+<label for="street-busy">If yes, how busy is your street?</label>
+<input type="text" id="street-busy" name="street_busy">
+<br>
+
+<label for="collar-tag">Will you be getting a collar and tag for him or her?</label>
+<input type="text" id="collar-tag" name="collar_tag" placeholder="Yes or No" required>
+<br>
+<small>(We recommend it, even for indoor-only cats, there's a chance they might get out).</small>
+<br>
+
+<label for="arrangements">What arrangements will you make when you go away?</label>
+<textarea id="arrangements" name="arrangements" rows="2" cols="50" placeholder="Explain briefly" required></textarea>
+<br>
+
+<label for="away-frequency">How often are you away?</label>
+<input type="text" id="away-frequency" name="away_frequency" required>
+<br>
+
+<label for="additional-info">Anything else you'd like us to know about you?</label>
+<textarea id="additional-info" name="additional_info" rows="4" cols="50" placeholder="Share more information if needed"></textarea>
+<br>
+
+<label for="pet-appeal">What appealed to you about this particular pet?</label>
+<textarea id="pet-appeal" name="pet_appeal" rows="2" cols="50" required></textarea>
+<br>
+
+<label for="adoption-reason">Why are you interested in adopting now?</label>
+<textarea id="adoption-reason" name="adoption_reason" rows="2" cols="50" required></textarea>
+<br>
+
+<h2>References</h2>
+
+<label for="clinic-name">Clinic Name:</label>
+<input type="text" id="clinic-name" name="clinic_name" required>
+<br>
+
+<label for="clinic-phone">Clinic Phone:</label>
+<input type="tel" id="clinic-phone" name="clinic_phone" required>
+<br>
+
+<label for="vet-records-name">Vet records are under the name of:</label>
+<input type="text" id="vet-records-name" name="vet_records_name" required>
+<br>
+
+<label for="personal-reference">Personal reference who has seen you around animals:</label>
+<input type="text" id="personal-reference" name="personal_reference" required>
+<br>
+
+<label for="reference-phone">Phone number:</label>
+<input type="tel" id="reference-phone" name="reference_phone" required>
+<br>
+
+<label for="reference-email">Email:</label>
+<input type="email" id="reference-email" name="reference_email" required>
+<br>
+        <!-- Submit Button -->
+        <p>
+            <button type="submit">Submit Application</button>
+        </p>
+    </form>
+</div>
+
+<script>
+function toggleMenu() {
+    var menu = document.querySelector(".topnav .menu");
+    menu.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
