@@ -309,15 +309,6 @@ body {
 
 /* Responsive styling for tablets and smaller desktops */
 @media (max-width: 768px) {
-    .topnav {
-        flex-direction: column;
-        height: auto;
-    }
-    .topnav .menu a,
-    .topnav .submenu {
-        padding: 20px;
-        font-size: 1.2em;
-    }
     .main-image {
         height: calc(80vh - 40px); /* Adjust height for smaller screens */
     }
@@ -401,7 +392,20 @@ body {
     float: none;
 }
 
-.hamburger {
+    .topnav .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Show menu when active */
+    .topnav .menu.active {
+        display: flex;
+    }
+
+    /* Hamburger styling */
+    .hamburger {
         display: block;
         font-size: 30px;
         cursor: pointer;
@@ -410,6 +414,13 @@ body {
         top: 20px;
         z-index: 1001;
     }
+
+    .topnav .menu a,
+    .topnav .submenu {
+        padding: 20px;
+        font-size: 1.2em;
+    }
+}
 @media (min-width: 769px) {
     .hamburger {
         display: none;
