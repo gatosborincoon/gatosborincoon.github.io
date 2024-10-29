@@ -1,7 +1,6 @@
-/* Base styling for the entire page */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 0; /* Removes default browser margin */
     padding: 0;
     box-sizing: border-box;
 }
@@ -12,53 +11,68 @@ body {
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    margin: 0; /* Ensure no margin adds extra space */
 }
 
 /* Topnav container styling */
 .topnav-container {
     width: 100%;
+    height: 100%; /* Matches the height of the topnav */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between logo and menu */
     align-items: center;
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
 }
 
 /* Topnav logo styling */
 .topnav-logo {
-    height: 100%;
-    max-height: 100px;
+    height: 100%; /* Ensure logo fits the height of the nav */
+    max-height: 100px; /* Optional: Limit max height for the logo */
 }
 
 /* Top Navigation bar styling */
 .topnav {
     width: 100%;
+    height: 100px; /* Takes up 10% of the viewport height */
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #ddd;
-    position: relative;
-    z-index: 1000;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the nav is above other content */
+    padding: 0; /* Removes padding from the nav */
 }
 
 /* Menu item styling */
 .topnav .menu a, .topnav .submenu {
-    padding: 15px 20px;
+    padding: 15px 20px; /* Increase padding for more spacing */
     text-decoration: none;
     color: black;
-    font-size: 1.2em;
-    transition: color 0.3s ease, border 0.3s ease;
+    font-size: 1.2em; /* Increase font size */
+    transition: color 0.3s ease, border 0.3s ease; /* Transition on text color instead of background */
+    position: relative;
 }
 
 .topnav .menu a:hover, .topnav .submenu:hover {
-    color: silver;
+    color: silver; /* Change text color on hover */
 }
 
-.topnav .menu.active {
-    display: flex;
-    flex-direction: column;
+.topnav .menu a:focus,
+.topnav .menu a:active,
+.topnav .submenu:focus,
+.topnav .submenu:active {
+    border-bottom: 2px solid black; /* Indicates the active page */
 }
 
 /* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -66,53 +80,369 @@ body {
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
-    top: 100%;
-    left: 0;
+    border: 1px solid black;
+    top: 100%; /* Align directly below the menu item */
+    left: 0; /* Align dropdown text directly under the parent menu */
 }
 
+.dropdown-content li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 20px; /* Increase padding for better spacing */
+    text-decoration: none;
+    display: block;
+    text-align: left; /* Align text to the left */
+}
+
+.dropdown-content a:hover {
+    color: silver; /* Change text color on hover */
+    background-color: white; /* Ensure background stays white on hover */
+}
+
+/* Show the dropdown content on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Responsive styling for the menu */
+/* Hamburger icon styling */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Position the hamburger icon on the right */
+    top: 20px;   /* Adjust the top position for alignment */
+    z-index: 1001; /* Ensure it stays above other content */
+}
+
+/* Mobile Menu Styling */
 @media (max-width: 768px) {
     .topnav .menu {
-        display: none;
+        display: none; /* Hide menu by default on smaller screens */
         flex-direction: column;
         width: 100%;
         text-align: center;
     }
 
-    /* Show menu when active */
+    /* Show hamburger icon */
+    .hamburger {
+        display: block;
+    }
+
+    /* Show menu when .active class is added */
     .topnav .menu.active {
         display: flex;
     }
+}
 
-    /* Hamburger styling */
-    .hamburger {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        z-index: 1001;
+@media (min-width: 769px) {
+    /* For larger screens - always show the menu and hide hamburger */
+    .topnav .menu {
+        display: flex;
     }
+    .hamburger {
+        display: none;
+    }
+}
 
+/* New main image section styling */
+.main-image {
+    width: 100%;
+    height: auto; /* Allows the height to adjust based on the image */
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes any default padding or margins */
+    object-fit: contain; /* Ensures the entire image is visible */
+    object-position: center; /* Centers the image within the container */
+}
+
+.about-image {
+    width: 100%;
+    height: auto; /* Allows the height to adjust based on the image */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes any default padding or margins */
+    object-fit: contain; /* Ensures the entire image is visible */
+    object-position: center; /* Centers the image within the container */
+}
+
+/* Content area styling */
+.content {
+    padding: 20px;
+    overflow: auto;
+}
+
+/* Gallery container styling */
+.gallery-container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Gallery title */
+.gallery-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns wide */
+    grid-gap: 10px; /* Space between images */
+}
+
+/* Gallery item styling */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: adds rounded corners to images */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a slight shadow */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Left column styling (Contact Form) */
+.left-column {
+    width: 40%;
+    padding: 20px;
+    background-color: #ffffff; /* Brighter white background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    float: left;
+}
+
+/* Right column styling (Text and Pictures) */
+.right-column {
+    width: 40%;
+    padding: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    min-height: 100%; /* Ensure the right-column takes up full height */
+    float: right;
+}
+
+/* Story image styling */
+.story-image {
+    width: 100px; /* Set the image width */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: block; /* Ensure it's treated as a block element */
+    align-self: center; /* Center image horizontally if needed */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #666;
+}
+
+/* Submit button styling */
+.submit-button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+
+/* Gallery container styling */
+.gallery-container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Gallery title */
+.gallery-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Gallery grid styling */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns wide */
+    grid-gap: 10px; /* Space between images */
+    align-items: center;
+}
+
+/* Gallery item styling */
+.gallery-item {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Creates a square aspect ratio */
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire grid item */
+    transform: translate(-50%, -50%);
+    border-radius: 5px; /* Optional: adds rounded corners to images */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a slight shadow */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive styling for tablets and smaller desktops */
+@media (max-width: 768px) {
+    .topnav {
+        flex-direction: column;
+        height: auto;
+    }
     .topnav .menu a,
     .topnav .submenu {
         padding: 20px;
         font-size: 1.2em;
     }
+    .main-image {
+        height: calc(80vh - 40px); /* Adjust height for smaller screens */
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns wide on smaller screens */
+    }
+    /* Modal container styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sits on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    display: flex; /* Center the modal content */
+    justify-content: center;
+    align-items: center;
 }
 
-@media (min-width: 769px) {
-    .hamburger {
-        display: none;
-    }
+/* Modal content (image) */
+.modal-content {
+    width: 90%; /* Take up 90% of the width */
+    max-width: 600px; /* Limit maximum width */
+    max-height: 80%; /* Limit maximum height */
+    object-fit: contain; /* Scale image down to fit within these dimensions */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+}
 
-    .topnav .menu {
-        display: flex;
-        flex-direction: row;
+/* Caption text */
+.modal-caption {
+    color: #ccc;
+    padding: 10px;
+    text-align: center;
+    max-width: 90%;
+}
+
+/* Close button */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+}
+
+@media (max-width: 480px) {
+    .topnav {
+        height: auto;
     }
+    .topnav .menu a,
+    .topnav .submenu {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+    .main-image {
+        height: calc(80vh - 40px); /* Adjust height for very small screens */
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Adjust to 1 column wide on very small screens */
+    }
+    .left-column {
+    width: 90%;
+    padding: 20px;
+    background-color: #ffffff; /* Brighter white background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    float: none;
+}
+
+/* Right column styling (Text and Pictures) */
+.right-column {
+    width: 90%;
+    padding: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    min-height: 100%; /* Ensure the right-column takes up full height */
+    float: none;
+}
 }
