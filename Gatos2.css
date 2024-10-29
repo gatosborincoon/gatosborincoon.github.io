@@ -365,9 +365,6 @@ body {
         height: calc(80vh - 40px); /* Adjust height for smaller screens */
     }
 
-    .gallery-grid {
-        grid-template-columns: 1fr; /* Adjust to 1 column wide on very small screens */
-    }
 .left-column {
     width: 90%;
     padding: 20px;
