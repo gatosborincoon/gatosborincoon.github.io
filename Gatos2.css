@@ -8,7 +8,7 @@ body {
 
 .header {
     background-color: #f8f9fa;
-    /*padding: 20px;*/
+    padding: 20px;
     text-align: center;
     border-bottom: 1px solid #ddd;
     margin: 0; /* Ensure no margin adds extra space */
@@ -370,7 +370,7 @@ body {
     .gallery-grid {
         grid-template-columns: 1fr; /* Adjust to 1 column wide on very small screens */
     }
-    .left-column {
+.left-column {
     width: 90%;
     padding: 20px;
     background-color: #ffffff; /* Brighter white background */
