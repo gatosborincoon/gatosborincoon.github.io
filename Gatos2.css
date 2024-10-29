@@ -40,6 +40,7 @@ body {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #ddd;
+    /*position: fixed;*/
     top: 0;
     left: 0;
     z-index: 1000; /* Ensures the nav is above other content */
@@ -107,47 +108,6 @@ body {
 /* Show the dropdown content on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-/* Hamburger icon styling */
-.hamburger {
-    display: none; /* Hidden by default */
-    font-size: 30px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px; /* Position the hamburger icon on the right */
-    top: 20px;   /* Adjust the top position for alignment */
-    z-index: 1001; /* Ensure it stays above other content */
-}
-
-/* Mobile Menu Styling */
-@media (max-width: 768px) {
-    .topnav .menu {
-        display: none; /* Hide menu by default on smaller screens */
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Show hamburger icon */
-    .hamburger {
-        display: block;
-    }
-
-    /* Show menu when .active class is added */
-    .topnav .menu.active {
-        display: flex;
-    }
-}
-
-@media (min-width: 769px) {
-    /* For larger screens - always show the menu and hide hamburger */
-    .topnav .menu {
-        display: flex;
-    }
-    .hamburger {
-        display: none;
-    }
 }
 
 /* New main image section styling */
@@ -406,6 +366,16 @@ body {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Position the hamburger icon on the right */
+    top: 20px;   /* Adjust the top position for alignment */
+    z-index: 1001; /* Ensure it stays above other content */
 }
 }
 
