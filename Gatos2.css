@@ -312,9 +312,7 @@ body {
         height: calc(80vh - 40px); /* Adjust height for smaller screens */
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns wide on smaller screens */
-    }
+
     /* Modal container styling */
 .modal {
     display: none; /* Hidden by default */
@@ -377,20 +375,7 @@ body {
     top: 20px;   /* Adjust the top position for alignment */
     z-index: 1001; /* Ensure it stays above other content */
 }
-}
 
-@media (max-width: 480px) {
-    .topnav {
-        height: auto;
-    }
-    .topnav .menu a,
-    .topnav .submenu {
-        padding: 15px;
-        font-size: 1.1em;
-    }
-    .main-image {
-        height: calc(80vh - 40px); /* Adjust height for very small screens */
-    }
     .gallery-grid {
         grid-template-columns: 1fr; /* Adjust to 1 column wide on very small screens */
     }
