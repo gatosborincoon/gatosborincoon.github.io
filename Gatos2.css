@@ -389,26 +389,26 @@ body {
     min-height: 100%; /* Ensure the right-column takes up full height */
     float: none;
 }
-
+/*
  .topnav {
         flex-direction: column;
         height: auto;
-        align-items: flex-start; /* Align menu items to the left on mobile */
+        align-items: flex-start;
     }
 
     .topnav .menu {
-        display: none; /* Hide menu by default on smaller screens */
+        display: none; 
         flex-direction: column;
         width: 100%;
-        text-align: left; /* Align menu items to the left */
+        text-align: left;
     }
 
-    /* Show menu when .active class is added */
+
     .topnav .menu.active {
         display: flex;
-        align-items: flex-start; /* Ensures all menu items align to the start */
-        padding-left: 10px; /* Optional: Add padding for better readability */
-    }
+        align-items: flex-start;
+        padding-left: 10px;
+    } */
 
     /* Hamburger icon styling */
     .hamburger {
