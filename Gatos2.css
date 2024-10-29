@@ -389,7 +389,7 @@ body {
     min-height: 100%; /* Ensure the right-column takes up full height */
     float: none;
 }
-/*
+
  .topnav {
         flex-direction: column;
         height: auto;
@@ -408,7 +408,7 @@ body {
         display: flex;
         align-items: flex-start;
         padding-left: 10px;
-    } */
+    }
 
     /* Hamburger icon styling */
     .hamburger {
