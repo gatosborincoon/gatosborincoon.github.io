@@ -57,7 +57,6 @@
     </div>
 </div>
 
-<!-- The Modal -->
 <div id="myModal" class="modal">
     <span class="modal-close">&times;</span>
     <img class="modal-content" id="img01">
@@ -65,30 +64,36 @@
 </div>
 
 <script>
-    // Get the modal
+    // Get the modal, image, and caption elements
     var modal = document.getElementById("myModal");
-
-    // Get the modal image and caption
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
 
-    // Get all images in the gallery
+    // Get all images in the gallery and add click event listeners
     var images = document.querySelectorAll(".gallery-item img");
     images.forEach(function(img) {
-        img.onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        };
+        img.addEventListener("click", function() {
+            if (this.src) { // Ensure there is a source before opening the modal
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
     });
 
-    // Get the <span> element that closes the modal
+    // Close modal on close button click
     var span = document.getElementsByClassName("modal-close")[0];
-
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
     };
+
+    // Close modal when clicking outside the image
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
 
     // Close the modal when clicking outside the image
     window.onclick = function(event) {
