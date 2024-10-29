@@ -5,7 +5,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Header styling */
+
 .header {
     background-color: #f8f9fa;
     /*padding: 20px;*/
@@ -415,4 +415,13 @@ body {
     min-height: 100%; /* Ensure the right-column takes up full height */
     float: none;
 }
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    .topnav .menu {
+        display: flex;
+        flex-direction: row;
+    }
 }
