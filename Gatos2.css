@@ -4,6 +4,13 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+/* Bootstrap overrides */
+.navbar-toggle {
+    background-color: #abc7d6;
+}
+.icon-bar {
+    background-color:white;
+}
 
 
 .header {
@@ -29,6 +36,7 @@ body {
 .topnav-logo {
     height: 100%; /* Ensure logo fits the height of the nav */
     max-height: 100px; /* Optional: Limit max height for the logo */
+    float: left;
 }
 
 /* Top Navigation bar styling */
