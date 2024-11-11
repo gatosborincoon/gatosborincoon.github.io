@@ -7,9 +7,22 @@ body {
 /* Bootstrap overrides */
 .navbar-toggle {
     background-color: #abc7d6;
+    margin-top:30px;
 }
 .icon-bar {
     background-color:white;
+}
+
+.navbar-brand {
+    height:100px;
+    padding: 40px 0;
+}
+@media (min-width: 768px) {
+    .navbar-nav {
+        padding:25px 0;
+        height:100px;
+        float:right;
+    }
 }
 
 
