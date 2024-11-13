@@ -155,7 +155,7 @@ body {
 /* New main image section styling */
 .main-image {
     width: 100%;
-    height: auto; /* Allows the height to adjust based on the image */
+    height: 100%; /* Allows the height to adjust based on the image */
 }
 
 .main-image img {
@@ -164,6 +164,18 @@ body {
     display: block; /* Removes any default padding or margins */
     object-fit: contain; /* Ensures the entire image is visible */
     object-position: center; /* Centers the image within the container */
+}
+
+.Seal {
+    /*width: 10%; */
+    /*height: 90px; */
+    float: left;
+}
+
+.Advert {
+    /*width: 90%; */
+    /*height: 90px; */
+    float: right;
 }
 
 .about-image {
