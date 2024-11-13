@@ -4,61 +4,70 @@
     <title>Gatos Borincoon</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" />
+
     <link rel="stylesheet" href="Gatos2.css">
 </head>
 <body>
 
-<div class="header">
-</div>
-
-<div class="topnav">
-    <div class="topnav-container">
+<div class="container-fluid">
+    <div class="navbar-header">
         <img src="media/logo1.jpg" alt="Gatos Borincoon Logo" class="topnav-logo">
-        <div class="menu">
-            <a href="cat_home.html">Home</a>
-            <!-- Adopt (with dropdown) -->
-            <div class="dropdown">
-                <a href="#" class="submenu">Adopt</a>
-                <ul class="dropdown-content">
-                    <li><a href="adopt_cats.html">Adopt Cats</a></li>
-                    <li><a href="stories.html">Adoption Stories</a></li>
-                    <li><a href="Pre_Application.html">Pre-Application Form</a></li>
-                    <li><a href="application.html">Adoption Application</a></li>
-                    <li><a href="rescue_costs.html">Rescue Costs</a></li>
-                </ul>
-            </div>
-
-        <!-- Other menu items -->
-        <a href="gallery.html">Cat Gallery</a>
-        <a href="contact.html">Contact</a>
-        <a href="donate.html">Donate</a>
-        </div>
-    <div class="hamburger" onclick="toggleMenu()">
-        &#9776; <!-- This is the hamburger icon -->
+        <a class="navbar-brand" href="/">Gatos Borincoon</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
     </div>
+    <div class="collapse navbar-collapse" id="mainNav">
+    <ul class="nav navbar-nav">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Adopt<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="adopt_cats.html">Adopt Cats</a></li>
+            <li><a href="stories.html">Adoption Stories</a></li>
+            <li><a href="Pre_Application.html">Pre-Application Form</a></li>
+            <li><a href="application.html">Adoption Application</a></li>
+            <li><a href="rescue_costs.html">Rescue Costs</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Cat Gallery</a></li>
+      <li><a href="foster.html">Foster</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
     </div>
-    </div>
+</div>
 <div class="gallery-container">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-        <div class="gallery-item"><img src="media/Beatriz8w.jpg" alt="Beatrice"></div>
-        <div class="gallery-item"><img src="media/Beatriz8w1.jpg" alt="Cat 2"></div>
-        <div class="gallery-item"><img src="media/1723665864829.jpg" alt="Cat 3"></div>
-        <div class="gallery-item"><img src="media/1723660388607.jpg" alt="Cat 4"></div>
-        <div class="gallery-item"><img src="media/Inigo7w.JPG" alt="Inigo Playing"></div>
-        <div class="gallery-item"><img src="media/Inigo8w.jpg" alt="Inigo"></div>
-        <div class="gallery-item"><img src="media/Selena_Roses.jpg" alt="Snow White and Rose Red"></div>
-        <div class="gallery-item"><img src="media/1723769092891.jpg" alt="Curled up in the Moon"></div>
-        <div class="gallery-item"><img src="media/1723769100519.jpg" alt="Rooow"></div>
-        <div class="gallery-item"><img src="media/1723769074887.jpg" alt="Happy Holidays"></div>
-        <div class="gallery-item"><img src="media/1723769104853.jpg" alt="Hello Friend"></div>
-        <div class="gallery-item"><img src="media/1723660466668.jpg" alt="Love"></div>
-        <div class="gallery-item"><img src="media/chair.jpg" alt="Brown Chair"></div>
-        <div class="gallery-item"><img src="media/Christmas.jpg" alt="Christmas"></div>
-        <div class="gallery-item"><img src="media/kitties.jpg" alt="Kitties"></div>
-        <!-- Add more gallery-item divs for additional pictures -->
     </div>
 </div>
+
+<div id="lightgallery" class="gallery-grid">
+        <a class="gallery-item" href="media/Beatriz8w.jpg"><img src="media/Beatriz8w.jpg" alt="Beatrice"></a>
+        <a class="gallery-item" href="media/Beatriz8w1.jpg"><img src="media/Beatriz8w1.jpg" alt="Cat 2"></a>
+        <a class="gallery-item" href="media/1723665864829.jpg"> <img src="media/1723665864829.jpg" alt="Cat 3"></a>
+        <a class="gallery-item" href="media/1723660388607.jpg"><img src="media/1723660388607.jpg" alt="Cat 4"></a>
+        <a class="gallery-item" href="media/Inigo7w.JPG"><img src="media/Inigo7w.JPG" alt="Inigo Playing"></a>
+        <a class="gallery-item" href="media/Inigo8w.jpg"><img src="media/Inigo8w.jpg" alt="Inigo"></a>
+        <a class="gallery-item" href="media/Selena_Roses.jpg"><img src="media/Selena_Roses.jpg" alt="Snow White and Rose Red"></a>
+        <a class="gallery-item" href="media/1723769092891.jpg"><img src="media/1723769092891.jpg" alt="Curled up in the Moon"></a>
+        <a class="gallery-item" href="media/1723769100519.jpg"><img src="media/1723769100519.jpg" alt="Rooow"></a>
+        <a class="gallery-item" href="media/1723769074887.jpg"><img src="media/1723769074887.jpg" alt="Happy Holidays"></a>
+        <a class="gallery-item" href="media/1723769104853.jpg"><img src="media/1723769104853.jpg" alt="Hello Friend"></a>
+        <a class="gallery-item" href="media/1723660466668.jpg"><img src="media/1723660466668.jpg" alt="Love"></a>
+        <a class="gallery-item" href="media/chair.jpg"><img src="media/chair.jpg" alt="Brown Chair"></a>
+        <a class="gallery-item" href="media/Christmas.jpg"><img src="media/Christmas.jpg" alt="Christmas"></a>
+        <a class="gallery-item" href="media/kitties.jpg"><img src="media/kitties.jpg" alt="Kitties"></a>
+</div>
+
+
 
 <div id="myModal" class="modal">
     <span class="modal-close">&times;</span>
@@ -66,37 +75,6 @@
     <div id="caption" class="modal-caption"></div>
 </div>
 
-<script>
-    // Get the modal, image, and caption elements
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-
-    // Get all images in the gallery and add click event listeners
-    var images = document.querySelectorAll(".gallery-item img");
-    images.forEach(function(img) {
-        img.addEventListener("click", function() {
-            if (this.src) { // Ensure there is a source before opening the modal
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            }
-        });
-    });
-
-    // Close modal on close button click
-    var span = document.getElementsByClassName("modal-close")[0];
-    span.onclick = function() {
-        modal.style.display = "none";
-    };
-
-    // Close modal when clicking outside the image
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
-</script>
 
 <script>
     function toggleMenu() {
@@ -105,6 +83,20 @@
     }
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+
+    <script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom, lgThumbnail],
+        speed: 500,
+        download: false,
+        // ... other settings
+    });
+    </script>
 
 </body>
 </html>
