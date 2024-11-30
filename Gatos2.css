@@ -4,7 +4,23 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+.overlay-content-box {
+    text-shadow: 0 0 10px #000000c2;
+    text-align: center;
+    background-color: #00000057;
+    color: white;
+    padding: 50px;
+}
+
+.overlay-spacer {
+    padding:50px;
+}
 /* Bootstrap overrides */
+
+.topbar{
+    background-color:white;
+}
 .navbar-toggle {
     background-color: #abc7d6;
     margin-top:30px;
@@ -472,4 +488,12 @@ body {
     .hamburger {
         display: none;
     }
+}
+
+
+.fixed-bkgd{
+    min-height:100vh;
+    background-attachment: fixed;
+    background-size:cover;
+
 }
