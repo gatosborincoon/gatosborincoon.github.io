@@ -7,11 +7,53 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="Gatos2.css">
-</head>
-<body style="background-image:url('media/kitties.jpg'); background-attachment:fixed; background-size:cover ">
+    <link rel="stylesheet" href="Gatos2.css"> <!-- Your existing stylesheet -->
+    <style>
+        /* Additional styles for form styling */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
 
-<div class="container-fluid topbar">
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <!-- Your header content -->
+</div>
+<div class="container-fluid">
     <div class="navbar-header">
         <a href="index.html"><img src="media/logo1.jpg" alt="Gatos Borincoon Logo" class="topnav-logo"></a>
         <a class="navbar-brand" href="index.html">Gatos Borincoon</a>
@@ -40,31 +82,18 @@
     </div>
 </div>
 
-    <div class="overlay-content-box" style="padding-top:50px; text-align:center">
-        <img src="media/logo2.jpg" alt="Story Image 1" style="height:150px; border-radius: 20px; margin-bottom:20px;box-shadow:0px 0px 20px black;"/>
-        <h1>
-             Rescue Costs </h1>
-    </div>
-    <div class="overlay-spacer">
-    </div>
-        <div class="overlay-content-box">
-            <h2>Cost of vetting in Puerto Rico</h2>
-            <p><b>$85</b> Spay&Neuter + rabies vax and certificate</p>
-            <p><b>$95</b> Spay&Neuter + rabies vax + distemper vax</p>
-            <p><b>$115</b> Spay&Neuter + rabies vax + distemper vax + FELV/FIV test + leukemia vax</p>
-            <p><b>$20</b> Microchip</p>
-        </div>
-        <div class="overlay-spacer">
-        </div>
 
-        <div class="overlay-content-box">
-            <h2>Additional costs</h2>
-            <p><b>$30</b> Care pack 1 (ear clean, tick/flea preventatives, nail trim)</p>
-            <p><b>$40</b> Care pack 2 (ear clean, tick/flea preventatives, nail trim and microchip)</p>
-            <p><b>$125</b> Cost of flight angel trip</p>
-            <p><b>$40</b> Cost of transport bag</p>
-        </div>
+<!-- Begin the Adoption Form Section -->
+<div class="content" style="text-align:center">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdHF79Dwn8ZhyG7nyEDRw3Cm-pgKWopEkciGsQWXQxM1IdJVQ/viewform?embedded=true" width="640" height="956" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+</div>
+
+<script>
+function toggleMenu() {
+    var menu = document.querySelector(".topnav .menu");
+    menu.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
-       

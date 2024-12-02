@@ -5,6 +5,53 @@ body {
     box-sizing: border-box;
 }
 
+.overlay-content-box {
+    text-shadow: 0 0 10px #000000c2;
+    text-align: center;
+    background-color: #00000057;
+    color: white;
+    padding: 50px;
+}
+
+.overlay-spacer {
+    padding:50px;
+}
+/* Bootstrap overrides */
+
+.topbar{
+    background-color:white;
+}
+.navbar-toggle {
+    background-color: #abc7d6;
+    margin-top:30px;
+}
+.icon-bar {
+    background-color:white;
+}
+
+.navbar-brand {
+    height:100px;
+    padding: 40px 0;
+    font-size:20px;
+}
+.navbar-nav > li > a {
+        color:black;
+}
+@media (min-width: 768px) {
+    .navbar-nav {
+        padding:25px 0;
+        height:100px;
+        float:right;
+    }
+    .navbar-nav > li > a {
+        line-height:20px;
+        font-size:20px;
+    }
+}
+
+.caret{
+    margin-left:5px;
+}
 
 .header {
     background-color: white;
@@ -29,6 +76,7 @@ body {
 .topnav-logo {
     height: 100%; /* Ensure logo fits the height of the nav */
     max-height: 100px; /* Optional: Limit max height for the logo */
+    float: left;
 }
 
 /* Top Navigation bar styling */
@@ -440,4 +488,12 @@ body {
     .hamburger {
         display: none;
     }
+}
+
+
+.fixed-bkgd{
+    min-height:100vh;
+    background-attachment: fixed;
+    background-size:cover;
+
 }
