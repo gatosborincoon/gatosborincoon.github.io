@@ -7,11 +7,51 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="Gatos2.css">
+    <link rel="stylesheet" href="Gatos2.css"> <!-- Your existing stylesheet -->
+    <style>
+        /* Additional styles for form styling */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
 
 <div class="header">
+    <!-- Your header content -->
 </div>
 <div class="container-fluid">
     <div class="navbar-header">
@@ -43,15 +83,18 @@
     </div>
 </div>
 
-<div class="left-column">
-    <p>Our organization helps rescuers to find forever homes for the cats they rescue, save, help raise and love. My goal is to connect people that help rehoming them with loving guardians. Some cats are strays that were abandoned, we rescue them and help them heal again and regain trust in humans once more! We foster with volunteers and get them ready to be placed with a loving guardian who adopt and love them as much as we do. Others were unfortunate or abandoned kittens saved from feral lives. We spay the mother through TNVR. We often have no choice but to release the mother to the outdoor colony but we care for them just as much. They keep their distance but trust enough to get food and water and we bring them to get medical treatments when injured. These are the cats we pledge to help: those cats that are less fortunate than others.</p>
+
+<!-- Begin the Adoption Form Section -->
+<div class="content" style="text-align:center">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc9qFFz8h7wFwWVO6UyiREiYzJ3nLul6UquzkpWw1tjABIEEA/viewform?embedded=true" width="640" height="956" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </div>
-<!-- New section for the cat image -->
-<div class="right-column">    
-    <div class="about-image">
-        <img src="media/1723769100519.jpg" alt="Cat Picture">
-    </div>
-</div>
+
+<script>
+function toggleMenu() {
+    var menu = document.querySelector(".topnav .menu");
+    menu.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
