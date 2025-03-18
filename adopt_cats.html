@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gatos Borincoon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Gatos2.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a href="index.html"><img src="media/logo1.jpg" alt="Gatos Borincoon Logo" class="topnav-logo"></a>
+        <a class="navbar-brand" href="index.html">Gatos Borincoon</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="mainNav">
+    <ul class="nav navbar-nav">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Adopt<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="adopt_cats.html">Adopt Cats</a></li>
+            <li><a href="stories.html">Adoption Stories</a></li>
+            <li><a href="Pre_Application.html">Pre-Application Form</a></li>
+            <li><a href="application.html">Adoption Application</a></li>
+            <li><a href="solicitud_adopcion.html">Solicitúd adopción (en español)</a></li>
+            <li><a href="rescue_costs.html">Rescue Costs</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Cat Gallery</a></li>
+      <li><a href="foster.html">Foster</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+    </div>
+</div>
+
+
+        <pet-scroller
+            type='[]'
+            age='[]'
+            limit="24"
+            hidebreed
+            status="adoptable"
+            petlisttitle=""
+            organization="MA592"
+            apibase="https://api.petfinder.com"
+            petfinderurl="https://www.petfinder.com"
+            accesstoken="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJtd1NmUDQ1SEpPckFSS0RkVGM1M3JGSjNHVTJIdnk0SUxVSGR5Y3NnNGpURzRCVHIzdCIsImp0aSI6Im1mNWJIelZyb1NNdUl3VlA1UVNNYmxjcHloN0RhdEVLSHdad040NzQiLCJpYXQiOjE3Mjk0NTg5NzcsIm5iZiI6MTcyOTQ1ODk3NywiZXhwIjo0ODg1MTMyNTc3LCJzdWIiOiIxNzY0MTE4MCIsInNjb3BlcyI6W119.ZFlXyvRmWOf9BpWZTyuk5qsWYknLspdqtj6Fw0C9iA3ZOLichYgT1VRdJNLIMKhw8KzFBy37YSvNrFdVDyiQpr5-4-SqKVVaGpYdTf3FPtbLMhUCua2iVrCa2hj3MbegMqR5fBSKjRH2OoyW6LcSqWEWyb18XoR02Ius5ZlsHjiCv_C92bCFJuPfTA7Q4xJEZOk5vRwwQSnsVYU8BeDkLMSi6qigJ3yqN-zn4uWoRBLKKaor6h74CschYVDfoS_tA7Vn0hF8_gaQQHdRBjzLZRJVjj1z7GyBe72wPbQ0g-uqJ_8NmXgrXelV3kJK_I_JBSu-7-ebUnK8vKbGqwxgkw">
+        </pet-scroller>
+        <script src="https://www.petfinder.com/assets/widgets/scripts/main-widgets-web.js">
+        </script>
+    
+
+</body>
+</html>
