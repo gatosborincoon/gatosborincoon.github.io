@@ -490,10 +490,19 @@ body {
     }
 }
 
-
 .fixed-bkgd{
     min-height:100vh;
     background-attachment: fixed;
     background-size:cover;
 
+}
+
+.stories-pad{
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+.stories-block
+{
+    padding-top:20px;
 }
